@@ -1,0 +1,8 @@
+pyproject.toml
+src/data/__init__.py
+src/data/dataset.py
+src/data/loading.py
+src/spectra_ml.egg-info/PKG-INFO
+src/spectra_ml.egg-info/SOURCES.txt
+src/spectra_ml.egg-info/dependency_links.txt
+src/spectra_ml.egg-info/top_level.txt
