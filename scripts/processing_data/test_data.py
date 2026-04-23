@@ -7,6 +7,12 @@ import numpy as np
 from data.loading import df_to_list_target_int
 from data.dataset import SpectraDataset
 from data.loading import load_spectra_csv
+from torch_geometric.utils import from_smiles
+from rdkit import Chem
+from rdkit.Chem import AllChem
+from rdkit.Chem import rdFingerprintGenerator
+from data.processing import from_smiles_to_fingerprint, smiles_list_to_nparr_list
+
 print("cwd:", os.getcwd())
 print("sys.path[0]:", sys.path[0])
 
@@ -22,4 +28,14 @@ csv = load_spectra_csv(test_data_path)
 # 3 to 703 is intensities 
 x, y = df_to_list_target_int(csv, "smile")
 data = SpectraDataset(smiles = x, spectras = y)
-print(data.__getitem__(0))
+# print(data.__getitem__(0))
+
+print(x[0])
+listi = smiles_list_to_nparr_list(x)
+print(listi[0])
+print(len(listi))
+
+
+
+list2 = smiles_list_to_nparr_list(data.smiles)
+print("list 2 ", list2[0])
