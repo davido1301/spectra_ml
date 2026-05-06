@@ -44,4 +44,3 @@ uv["smile"] = smiles
 uv.to_csv("/home/davido/Projects/data/QMS9/csv/qm9s_csv/smile_uv.csv")
 print("Done!")
 # No idea why but i cant load in the stuff LOL 
-# Like I should look furtherly into it not intoxicated XD

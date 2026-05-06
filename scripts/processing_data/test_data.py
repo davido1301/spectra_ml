@@ -39,3 +39,9 @@ print(len(listi))
 
 list2 = smiles_list_to_nparr_list(data.smiles)
 print("list 2 ", list2[0])
+
+train, test = torch.utils.data.random_split(data, [0.8, 0.2])
+
+# print("here lol")
+# rint(train[0])
+# print(test[0])
